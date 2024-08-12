@@ -1,0 +1,250 @@
+@import url('https://fonts.googleapis.com/css2?family=Coustard:wght@400;900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+a {
+    text-decoration: none;
+    color: var(--color)
+}
+
+:root {
+    --bodyBg: #000;
+    --color: #fff;
+    --headerBg: #202020;
+    --cardBg: #202020;
+    --hoverCol: #6e1cd9; 
+    --bgBtn: #6e1cd9;
+    --cardBg2: #141414;
+}
+
+.light {
+    --bodyBg: #f5f5f5;    
+    --color: #0a4826;      
+    --headerBg: #e0f7e9;   
+    --cardBg: #ffffff;    
+    --hoverCol: #1b8c4f;   
+    --bgBtn: #1b8c4f;  
+    --cardBg2: #c8edc6;
+    --wind: 'img/windL.svg';
+    --hum: 'img/humidityL.svg';
+    --pres: 'img/pressureL.svg';
+    --fl: 'img/feelslikeL.svg';
+}
+
+
+body {
+    background-color: var(--bodyBg);
+    color: var(--color);
+    padding: 1.875rem 7.5rem 0;
+}
+
+header {
+    background-color: var(--headerBg);
+    display: flex;
+    justify-content: space-between;
+    color: var(--color);
+    width: 100%;
+    height: 100%;
+    align-items: center;
+    padding: 1.875rem;
+    border-radius: 1.25rem;
+    margin-bottom: 1.875rem;
+}
+header a {
+    font-family: 'Raleway', 'sans-serif';
+    font-size: 1.875rem;
+    font-weight: 400;
+    transition: 0.3s;
+}
+header a:hover {
+    transform: translateY(-0.313rem);
+}
+header div {
+    align-items: center;
+    justify-content: space-between;
+    display: flex;
+    gap: 10px;
+}
+header div img {
+    width: 1.875rem;
+    cursor: pointer;
+    transition: 0.3s;
+}
+header div img:hover {
+    transform: translateY(-0.313rem);
+}
+header div input {
+    padding: 0.625rem;
+    border-radius: 0.625rem;
+    outline: none;
+    font-family: 'Raleway', 'sans-serif';
+    border: none;
+    transition: 0.3s;
+}
+header div button {
+    padding: 0.625rem;
+    border-radius: 0.625rem;
+    font-family: 'Raleway', 'sans-serif';
+    background-color: var(--bgBtn);
+    color: #fff;
+    cursor: pointer;
+    border: none;
+    transition: 0.3s;
+}
+header div button:hover {
+    transform: scale(1.05);
+}
+section {
+    display: block;
+}
+main {
+    display: flex;
+    gap: 1.25rem;
+    width: 100%;
+}
+.block_left {
+    width: 30%;
+}
+.block_right {
+    width: 70%;
+}
+.block_right_card {
+    background-color: var(--cardBg);
+    width: 100%;
+    border-radius: 1.25rem;
+    padding: 1.875rem;
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    gap: 1.25rem;
+    font-family: 'Montserrat', 'sans-serif';
+    margin-bottom : 1.875rem;
+}
+.card {
+    background-color: var(--cardBg);
+    width: 100%;
+    border-radius: 1.25rem;
+    padding: 1.875rem 0;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    gap: 1.25rem;
+    font-family: 'Montserrat', 'sans-serif';
+    margin-bottom : 1.875rem;
+}
+.card .imgCon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1.25rem 0;
+    width: 100%;
+}
+.card .imgCon img {
+    width: 7.5rem;
+}
+.card .content{
+    display: flex;
+    flex-direction: column;
+    gap: 0.625rem;
+}
+.card .content .cur_location {
+    font-size: 0.938rem;
+}
+.card .content .cur_temp_c {
+    font-size: 1.875rem;
+}
+.card .content .cur_status {
+    font-size: 0.938rem;
+}
+.card .content .today {
+    display: flex;
+    justify-content: center;
+    font-size: 0.938rem;
+    gap: 0.625rem;
+}
+.card .otherParams .wind, .pressure, .humidity, .feels_like {
+    display: flex;
+    padding: 0 1.25rem;
+    font-size: 0.938rem;
+    gap: 1.25rem;
+}
+.card .otherParams .section_params .icon {
+    width: 1.875rem;
+}
+.card .otherParams .param {
+    display: flex;
+    flex-direction: column;
+    text-align: left; 
+    margin-bottom: 0.625rem;
+}
+.card .otherParams .param .title {
+    font-size: 1.25rem;
+}
+#hourlyWeather {
+    display : flex;
+    gap: 0.625rem;
+    overflow-x: scroll;
+    width: 100%;
+}
+#D10Weather {
+    display : flex;
+    gap: 0.625rem;
+    overflow-x: scroll;
+    width: 100%;
+}
+.hour_card {
+    align-items: center;
+    background-color: var(--cardBg2);
+    border-radius: 1.25rem;
+    display: flex;
+    gap: 1.25rem;
+    flex-direction: column;
+    text-align: center;
+    font-family: 'Montserrat', 'sans-serif';
+    padding: 1.25rem 3.125rem;
+}
+.d10_card {
+    align-items: center;
+    background-color: var(--cardBg2);
+    border-radius: 1.25rem;
+    display: flex;
+    gap: 1.25rem;
+    flex-direction: column;
+    text-align: center;
+    font-family: 'Montserrat', 'sans-serif';
+    padding: 1.25rem 3.125rem;
+}
+
+.icon {
+    width: 3.75rem;
+}
+
+::-webkit-scrollbar {
+    display: none;
+}
+
+
+@media only screen and (max-width: 600px) {
+    body {
+        padding: 1.875rem 1.25rem 0;
+    }
+    header {
+        padding: 1.25rem;
+        flex-direction: column;
+        gap : 1.25rem;
+    }
+    main {
+        flex-direction: column;
+        gap : 1.25rem;
+    }
+    .block_left {
+        width: 100%;
+    }
+    .block_right {
+        width: 100%;
+    }
+
+}

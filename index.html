@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header>
+        <a href="/">meteo.</a>
+        <div>
+            <img src="img/sun.svg" onclick="theme()" alt="theme" id="theme_img">
+            <input type="text" id="city" placeholder="Please enter your city">    
+            <button type="submit" onclick="getData()">Submit</button>
+        </div>
+    </header>
+    <main>
+        <section class="block_left">
+            <section class="card" id="curWea">The city is not selected</section>
+            <section class="card" id="otherPar">The city is not selected</section>
+        </section>
+        <section class="block_right">
+            <section class="block_right_card">
+                <p class="title">Hourly weather</p>
+                <div id="hourlyWeather">The city is not selected</div>
+            </section>
+            <section class="block_right_card">
+                <p class="title">10-Day weather forecast</p>
+                <div id="D10Weather">The city is not selected</div>
+            </section>
+        </section>
+
+    </main>
+    <script src="app.js"></script>
+</body>
+</html>
